@@ -1,6 +1,13 @@
 import streamlit as st
 import joblib
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import PassiveAggressiveClassifier
+import joblib
 
+# train model ...
+
+joblib.dump(model, "model.pkl")
+joblib.dump(tfidf, "vectorizer.pkl")
 model = joblib.load("model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
