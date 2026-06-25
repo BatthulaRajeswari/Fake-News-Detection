@@ -1,0 +1,5 @@
+tfidf = TfidfVectorizer(stop_words='english')
+
+X_train_tfidf = tfidf.fit_transform(X_train)
+
+joblib.dump(tfidf, "vectorizer.pkl")
